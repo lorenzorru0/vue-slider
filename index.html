@@ -19,9 +19,9 @@
     </head>
     <body>
 
-        <div id="root">
+        <h1>Spiagge sardegna</h1>
 
-            <h1>Spiagge sardegna</h1>
+        <div id="root" @click="stopInterval()">
 
             <div class="carouselContainer">
                 <div class="angleContainer" @click="imageIndexDown()">
@@ -36,9 +36,12 @@
                 </div>
             </div>
 
-            <!-- <div class="carouselSearch" v-for="(image, index) in images" :key="index">
-                <img :src="image[index].url" :alt=image[index].name>
-            </div> -->
+            <div class="carouselSearch">
+                <div class="divImage" v-for="(image, index) in images" :key="index">
+                    <img :src=image.url :alt=image.name @click="moveToImage(index)">
+                    <div v-if="imageIndex == index" class="active"></div>
+                </div>
+            </div>
             
         </div>
         

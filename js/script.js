@@ -41,10 +41,12 @@ const vue = new Vue({
                 this.imageIndex = this.images.length - 1;
             }
         },
+        moveToImage: function (index) {
+            this.imageIndex = index;
+        },
         autoPlay: function () {
-            setInterval(
-                function () {
-                    console.log("ciao");
+            autoPlayImages = setInterval(
+                () => {
                     this.imageIndex++;
                     if (this.imageIndex == 5) {
                         this.imageIndex = 0;
@@ -52,6 +54,9 @@ const vue = new Vue({
                 },
                 3000
             );
+        },
+        stopInterval: function () {
+            clearInterval(autoPlayImages);
         }
     }
 });
