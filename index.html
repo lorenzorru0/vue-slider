@@ -9,9 +9,38 @@
             integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- /Font awesome -->
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <!-- /Google font -->
+        <link rel="stylesheet" href="css/style.css">
         <title>Vue slider</title>
     </head>
     <body>
+
+        <div id="root">
+
+            <h1>Spiagge sardegna</h1>
+
+            <div class="carouselContainer">
+                <div class="angleContainer" @click="imageIndexDown()">
+                    <i class="fas fa-angle-left"></i>
+                </div>
+                <div>
+                    <img :src=images[imageIndex].url :alt=images[imageIndex].name>
+                </div>
+                <p class="imageName">{{images[imageIndex].name}}</p>
+                <div class="angleContainer" @click="imageIndexUp()">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+
+            <!-- <div class="carouselSearch" v-for="(image, index) in images" :key="index">
+                <img :src="image[index].url" :alt=image[index].name>
+            </div> -->
+            
+        </div>
         
 
         <!-- Scripts -->

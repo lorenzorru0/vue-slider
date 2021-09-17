@@ -4,3 +4,53 @@
     margin: 0;
     padding: 0;
 }
+
+/* Common */
+body {
+    font-family: 'Lobster', cursive;
+}
+.carouselContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Body */
+h1 {
+    padding: 20px 0px;
+    text-align: center;
+}
+.carouselContainer img {
+    width: 100%;
+    display: block;
+}
+.carouselContainer i {
+    line-height: 100%;
+    font-size: 50px;
+    padding: 0 10px;
+
+}
+.angleContainer {
+    line-height: 669.38px;
+    background-color: rgb(211, 211, 211);
+}
+.carouselSearch {
+    margin-top: 20px;
+    display: flex;
+    width: 20%;
+}
+.imageName {
+    position: absolute;
+    transform: translateX(50%);
+    top: 10px;
+    font-size: 20px;
+}
+
+/* Effetti hover */
+.angleContainer:hover {
+    background-color: rgb(179, 179, 179);
+}
