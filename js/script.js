@@ -25,6 +25,9 @@ const vue = new Vue({
         ],
         imageIndex: 1
     },
+    mounted() { 
+        this.autoPlay() 
+    },
     methods: {
         imageIndexUp: function () {
             this.imageIndex++;
@@ -37,6 +40,18 @@ const vue = new Vue({
             if ( this.imageIndex == -1) {
                 this.imageIndex = this.images.length - 1;
             }
+        },
+        autoPlay: function () {
+            setInterval(
+                function () {
+                    console.log("ciao");
+                    this.imageIndex++;
+                    if (this.imageIndex == 5) {
+                        this.imageIndex = 0;
+                    }
+                },
+                3000
+            );
         }
     }
 });
